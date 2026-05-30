@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Syne:wght@400;500;600;700;800&display=swap" />
 
   <style>
     :root {
@@ -54,7 +54,6 @@
     img { max-width: 100%; display: block; }
     section { padding: 110px 0; }
     .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-    ::with-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 99px; }
@@ -426,6 +425,7 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <nav id="navbar">
     <div class="container nav-inner">
       <a href="#hero" class="nav-logo">NK<span>.</span></a>
@@ -444,13 +444,14 @@
 
   <div class="mobile-nav" id="mobileNav">
     <button class="mobile-nav-close" id="mobileNavClose">✕</button>
-    <a href="#about"       onclick="closeMobileNav()">About</a>
+    <a href="#about"      onclick="closeMobileNav()">About</a>
     <a href="#experience" onclick="closeMobileNav()">Experience</a>
     <a href="#skills"     onclick="closeMobileNav()">Skills</a>
     <a href="#projects"   onclick="closeMobileNav()">Projects</a>
     <a href="#contact"    onclick="closeMobileNav()">Contact</a>
   </div>
 
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-grid-bg"></div>
     <div class="orb orb-1"></div>
@@ -488,6 +489,7 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <div class="reveal">
@@ -499,14 +501,14 @@
         <div class="about-text reveal reveal-delay-1">
           <p>
             I'm a <strong>Full Stack &amp; Frontend Engineer</strong> currently pursuing my B.Tech at
-            XML/JSON endpoints, holding a Diploma in Computer Science from
+            MVGR College of Engineering (2025–2028), holding a Diploma in Computer Science from
             Andhra Polytechnic.
           </p>
           <p>
-            I'm the <strong style="color:var(--aw-gold)">solo founder and full-stack engineer of AIWorkFusion</strong> — an autonomous academic orchestration platform that parses multi-format course materials (PDFs, lectures, syllabi) and cross-compiles them into interactive presentation decks, flashcards, and adaptive quiz engines using a Groq AI backend and a highly optimized React + Django REST infrastructure containerized under Docker.
+            I'm the <strong style="color:var(--aw-gold)">solo founder and full-stack engineer of AIWorkFusion</strong> — an autonomous academic orchestration platform that parses multi-format course materials (PDFs, lectures, syllabi) and cross-compiles them into interactive presentation decks, flashcards, and adaptive quiz engines using a Groq AI backend and a React + Django REST infrastructure.
           </p>
           <p>
-            I focus heavily on <strong>software decoupling, state synchronization, and background worker task distribution</strong>.
+            I focus heavily on <strong>software decoupling, state synchronization, and custom API architecture</strong>.
             I have a strong foundation in full-stack engineering from my developer roles at
             <strong>Krify Software Technologies</strong> and <strong>Unessa Foundation</strong>, where I shipped production-grade CRUD controllers, normalized database views, and responsive user states.
           </p>
@@ -544,6 +546,7 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
       <div class="reveal">
@@ -554,6 +557,7 @@
 
       <div class="timeline">
 
+        <!-- AIWorkFusion — UPDATED flagship founder role -->
         <div class="timeline-item timeline-item--founder reveal reveal-delay-1">
           <div class="timeline-header">
             <div>
@@ -564,7 +568,7 @@
                   <span class="badge-dot"></span>
                   Founder
                 </span>
-                <span class="perf-badge--gold perf-badge" style="font-size:9.5px;">🏗 Distributed Micro-Services</span>
+                <span class="perf-badge--gold perf-badge" style="font-size:9.5px;">🏗 Solo System Execution</span>
               </div>
             </div>
             <div class="timeline-date">May 2025 – Present</div>
@@ -572,10 +576,12 @@
           <div class="timeline-body">
             Architected and shipped an autonomous academic orchestration platform end-to-end as a solo engineer.
             Designed a <strong style="color:var(--text)">Map-Reduce PDF synthesis pipeline</strong> that chunks, sanitizes, and feeds dense academic material into LLM contexts without token overflow.
-            Hardened the cluster framework using **Docker Compose orchestration**, replacing single-threaded servers with multi-worker **Gunicorn HTTP proxies** and **Nginx Alpine** frontend engines.
-            Built a high-performance asynchronous execution pipeline by pairing **Celery background workers with a Redis message broker** to handle heavy text expansion loops and WeasyPrint compilation processes off the request-response thread.
-            Implemented an isolated, secure rendering layer inside React utilizing the **`srcDoc` iframe sandbox pipeline** to guarantee zero layout or style bleeding from dynamic AI outputs.
-            Hardened application security against OWASP core exploits — HttpOnly/Secure cookies, ORM-parameterized queries, and client-side context isolation.
+            Implemented a rigid <strong style="color:var(--text)">JSON schema alignment layer</strong> on the Django backend to enforce strict data contracts and eliminate React rendering crashes.
+            Built a <strong style="color:var(--text)">Groq API router gateway</strong> with multi-vendor hot-swap support and a passwordless stateless Magic Link JWT authentication controller.
+            Orchestrated a <strong style="color:var(--text)">Docker Compose multi-service cluster</strong> pairing a multi-worker Gunicorn WSGI application server with an Nginx Alpine static asset proxy for zero-downtime container deployments.
+            Offloaded heavy AI processing and WeasyPrint file compilation to an asynchronous <strong style="color:var(--text)">Celery background task grid</strong> backed by a Redis message broker — eliminating HTTP request thread blocking under peak load.
+            Implemented a <strong style="color:var(--text)">React <code>srcDoc</code> iframe sandbox pipeline</strong> to isolate rendered presentation previews, preventing CSS style bleed and blocking DOM manipulation injection vectors.
+            Hardened application security against OWASP core exploits — HttpOnly/Secure cookies, ORM-parameterized queries, and server-side environment variable management.
           </div>
         </div>
 
@@ -627,6 +633,7 @@
     </div>
   </section>
 
+  <!-- SKILLS — UPDATED taxonomy -->
   <section id="skills">
     <div class="container">
       <div class="reveal">
@@ -646,61 +653,70 @@
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-2">
-          <div class="skill-category">🖥 Frontend &amp; Sandboxing</div>
+          <div class="skill-category">🖥 Frontend</div>
           <div class="skill-tags">
             <span class="skill-tag">React</span>
             <span class="skill-tag">Zustand</span>
             <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">iframe srcDoc Isolation</span>
-            <span class="skill-tag">GSAP Animations</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">GSAP</span>
             <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">iframe srcDoc Isolation</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-3">
-          <div class="skill-category">🔧 Backend &amp; Architecture</div>
+          <div class="skill-category">🔧 Backend &amp; APIs</div>
           <div class="skill-tags">
+            <span class="skill-tag">Django</span>
             <span class="skill-tag">Django REST Framework</span>
-            <span class="skill-tag">Gunicorn WSGI Server</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">REST API</span>
+            <span class="skill-tag">WebSockets</span>
+            <span class="skill-tag">Gunicorn WSGI</span>
             <span class="skill-tag">Nginx HTTP Proxy</span>
             <span class="skill-tag">Celery Tasks</span>
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">WebSockets</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-4">
-          <div class="skill-category">🤖 AI &amp; Automation</div>
+          <div class="skill-category">🤖 AI &amp; Integration</div>
           <div class="skill-tags">
             <span class="skill-tag" style="background:var(--aw-gold-dim);border-color:var(--aw-gold-border);color:var(--aw-gold)">Groq API</span>
+            <span class="skill-tag">LLM Prompt Engineering</span>
             <span class="skill-tag">Structured JSON Outputs</span>
             <span class="skill-tag">Pydantic Validation</span>
+            <span class="skill-tag">Whisper STT</span>
+            <span class="skill-tag">Map-Reduce Pipelines</span>
             <span class="skill-tag">Semantic Layout Compilers</span>
-            <span class="skill-tag">Map-Reduce Processing</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-1">
           <div class="skill-category">🗄 Databases &amp; Caching</div>
           <div class="skill-tags">
-            <span class="skill-tag">Redis Broker</span>
             <span class="skill-tag">PostgreSQL</span>
             <span class="skill-tag">MySQL</span>
             <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Redis Broker</span>
             <span class="skill-tag">Supabase</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-2">
-          <div class="skill-category">🛠 Tools &amp; Devops</div>
+          <div class="skill-category">🛠 Tools &amp; Platforms</div>
           <div class="skill-tags">
-            <span class="skill-tag">Docker Containerization</span>
-            <span class="skill-tag">Docker Compose</span>
             <span class="skill-tag">Git &amp; GitHub</span>
-            <span class="skill-tag">Postman Environment</span>
-            <span class="skill-tag">Vercel Deployment</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Docker Compose</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">WordPress</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PROJECTS — UPDATED arch diagram + flagship features -->
   <section id="projects">
     <div class="container">
       <div class="reveal">
@@ -712,74 +728,80 @@
 
       <div class="projects-grid">
 
+        <!-- AIWorkFusion FLAGSHIP — UPDATED arch diagram + features -->
         <div class="project-card project-card--flagship reveal reveal-delay-1" style="grid-column: 1 / -1;">
           <div class="project-header" style="flex-wrap: wrap; gap: 16px;">
             <div style="flex: 1; min-width: 240px;">
               <div style="font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--aw-gold); margin-bottom: 6px;">Solo Founder &amp; Full-Stack Engineer</div>
               <div class="project-title" style="font-size: 1.6rem; color: var(--aw-gold);">AIWorkFusion</div>
-              <div style="font-family: var(--font-display); font-size: 0.92rem; color: var(--text-2); font-weight: 400; margin-top: 4px; line-height: 1.4;">Autonomous Academic Orchestration Platform — Multi-format course material &rarr; interactive decks, flashcards &amp; adaptive quizzes</div>
+              <div style="font-family: var(--font-display); font-size: 0.92rem; color: var(--text-2); font-weight: 400; margin-top: 4px; line-height: 1.4;">Autonomous Academic Orchestration Platform — Multi-format course material → interactive decks, flashcards &amp; adaptive quizzes</div>
             </div>
             <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
-              <span class="perf-badge perf-badge--gold" style="white-space:nowrap;">⚡ Distributed Cluster</span>
+              <span class="perf-badge perf-badge--gold" style="white-space:nowrap;">⚡ Flagship Product</span>
               <div class="founder-ribbon">
                 <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color: var(--aw-gold)"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
-                Asynchronous Core Architecture
+                Solo System Execution
               </div>
             </div>
           </div>
 
           <div class="project-tags">
-            <span class="project-tag tag-gold">React SPA</span>
-            <span class="project-tag tag-gold">Django REST</span>
-            <span class="project-tag tag-gold">Celery + Redis Queue</span>
-            <span class="project-tag tag-gold">Gunicorn / Nginx</span>
-            <span class="project-tag tag-gold">Docker Architecture</span>
+            <span class="project-tag tag-gold">React</span>
+            <span class="project-tag tag-gold">Django REST Framework</span>
+            <span class="project-tag tag-gold">Groq API</span>
             <span class="project-tag tag-gold">PostgreSQL</span>
-            <span class="project-tag tag-tech">srcDoc Sandbox View</span>
-            <span class="project-tag tag-tech">JSON Schema Enforcement</span>
+            <span class="project-tag tag-gold">Tailwind CSS</span>
+            <span class="project-tag tag-gold">Docker Compose</span>
+            <span class="project-tag tag-gold">Celery + Redis</span>
+            <span class="project-tag tag-gold">Nginx + Gunicorn</span>
+            <span class="project-tag tag-tech">LLM JSON Schema</span>
+            <span class="project-tag tag-tech">Map-Reduce Pipeline</span>
+            <span class="project-tag tag-tech">iframe srcDoc Sandbox</span>
           </div>
 
+          <!-- UPDATED architecture diagram -->
           <div class="arch-diagram">
             <div><span class="aw">[Nginx Alpine Web Client]</span> ──(Async Post Payloads)──&gt; <span class="cy">[Gunicorn HTTP App Node]</span></div>
-            <div>                                                                               │</div>
-            <div>                                                                     (Defensive Task Offload)</div>
-            <div>                                                                               ▼</div>
-            <div><span class="gr">[React Frame srcDoc Box]</span> &lt;──(Pipes JSON Arrays)── <span class="cy">[Celery Worker Engine]</span> &lt;── <span class="aw">[Redis Broker]</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Defensive Task Offload)</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</div>
+            <div><span class="gr">[React Frame srcDoc Box]</span> &lt;──(Pipes JSON Arrays)── <span class="aw">[Celery Worker Engine]</span> &lt;── <span class="cy">[Redis Broker]</span></div>
           </div>
 
           <div class="features-grid">
             <ul class="project-features">
-              <li class="feat-gold"><strong style="color:var(--text)">Multi-Stage PDF Synthesis Pipeline</strong> — Map-Reduce Python engine chunks, sanitizes, and passes dense academic PDFs into LLM contexts without token overflow</li>
-              <li class="feat-gold"><strong style="color:var(--text)">Asynchronous Task Offloading Engine</strong> — Linked a Celery worker grid with a Redis broker to process multi-page WeasyPrint compiles completely off the main thread</li>
-              <li class="feat-gold"><strong style="color:var(--text)">Rigid Schema-Driven Alignment</strong> — Built defensive Pydantic JSON contracts on the backend to enforce zero-crash structured data translation for React states</li>
+              <li class="feat-gold"><strong style="color:var(--text)">Docker Compose Container Cluster</strong> — Multi-service orchestration pairing a multi-worker Gunicorn WSGI server with Nginx Alpine as a static asset proxy, enabling zero-downtime deployments</li>
+              <li class="feat-gold"><strong style="color:var(--text)">Celery Async Task Grid + Redis Broker</strong> — Offloads heavy AI API calls and WeasyPrint file compilation off the HTTP request thread, eliminating blocking under peak load</li>
+              <li class="feat-gold"><strong style="color:var(--text)">React srcDoc iframe Sandbox Pipeline</strong> — Isolates rendered presentation previews inside sandboxed iframes to prevent CSS style bleed and block DOM injection vectors</li>
             </ul>
             <ul class="project-features">
-              <li class="feat-gold"><strong style="color:var(--text)">Isolated Canvas Viewport Studio</strong> — Implemented high-fidelity visual sandboxing using local iframe `srcDoc` layers to completely block generated layout bleed</li>
-              <li class="feat-gold"><strong style="color:var(--text)">Production Container Cluster</strong> — Fully containerized the network layout under Docker Compose with production variables, CORS overrides, and strict whitelisting</li>
-              <li class="feat-gold"><strong style="color:var(--text)">Perceived Performance Engineering</strong> — Designed optimized multi-tier loading indicators to elegantly guide user interfaces during distributed API execution loops</li>
+              <li class="feat-gold"><strong style="color:var(--text)">Multi-Stage PDF Synthesis Pipeline</strong> — Map-Reduce Python engine chunks, sanitizes, and passes dense academic PDFs into LLM contexts without token overflow</li>
+              <li class="feat-gold"><strong style="color:var(--text)">Structured JSON Schema Alignment</strong> — Rigid nested JSON contracts on the backend enforce seamless REST API communication and error-free React rendering</li>
+              <li class="feat-gold"><strong style="color:var(--text)">Production Security Hardening</strong> — OWASP-hardened: HttpOnly/Secure cookies, Django ORM parameterization, server-side env vars, Magic Link JWT auth</li>
             </ul>
           </div>
 
           <div class="project-links">
             <a href="#" class="project-link project-link--gold">GitHub Codebase →</a>
-            <a href="#" class="project-link project-link--gold">Watch Demo (Multi-Device Localhost Walkthrough) →</a>
+            <a href="#" class="project-link project-link--gold">Watch Demo (Localhost Walkthrough) →</a>
           </div>
         </div>
 
+        <!-- Bus Tickets -->
         <div class="project-card reveal reveal-delay-2">
           <div class="project-header">
             <div class="project-title">Bus Tickets Booking &amp; Management System</div>
             <div class="project-date">Mar 2026</div>
           </div>
           <div class="project-tags">
-            <span class="project-tag tag-tech">React SPA</span>
+            <span class="project-tag tag-tech">React</span>
             <span class="project-tag tag-tech">Django REST</span>
-            <span class="project-tag tag-tech">GSAP Core</span>
-            <span class="project-tag tag-tech">PayPal Portal API</span>
+            <span class="project-tag tag-tech">GSAP</span>
+            <span class="project-tag tag-tech">PayPal API</span>
           </div>
           <ul class="project-features">
             <li>Interactive <strong style="color:var(--text)">seat selection grid component</strong> with transactional seat-locking checks</li>
-            <li>End-to-end flow: route filtering &rarr; context booking &rarr; live PayPal portal integration</li>
+            <li>End-to-end flow: route filtering → context booking → live PayPal portal integration</li>
             <li>Smooth GSAP micro-animations for layout transitions and selection feedback loops</li>
             <li>High-performance SPA using clean Django REST token validation</li>
           </ul>
@@ -789,6 +811,7 @@
           </div>
         </div>
 
+        <!-- Task Management -->
         <div class="project-card reveal reveal-delay-3">
           <div class="project-header">
             <div class="project-title">Scalable SaaS Task Management Pipeline</div>
@@ -796,7 +819,7 @@
           </div>
           <div class="project-tags">
             <span class="project-tag tag-tech">Redis Caching</span>
-            <span class="project-tag tag-tech">Django ORM</span>
+            <span class="project-tag tag-tech">Django</span>
             <span class="project-tag tag-tech">PostgreSQL</span>
             <span class="project-tag tag-tech">REST Controllers</span>
           </div>
@@ -811,13 +834,14 @@
           </div>
         </div>
 
+        <!-- Enterprise Tracker -->
         <div class="project-card reveal reveal-delay-4">
           <div class="project-header">
             <div class="project-title">Enterprise Project Tracker Canvas</div>
             <div class="project-date">Mar 2026</div>
           </div>
           <div class="project-tags">
-            <span class="project-tag tag-tech">React App</span>
+            <span class="project-tag tag-tech">React</span>
             <span class="project-tag tag-tech">TypeScript</span>
             <span class="project-tag tag-tech">Zustand Store</span>
             <span class="project-tag tag-tech">Tailwind CSS</span>
@@ -840,6 +864,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <div class="contact-inner">
@@ -890,6 +915,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <p>Designed &amp; built by <span>K Nikhil</span> · Founder of <span style="color:var(--aw-gold)">AIWorkFusion</span> · © 2026 · All rights reserved</p>
@@ -907,12 +933,14 @@
     hamburgerBtn.addEventListener('click',   () => mobileNav.classList.add('open'));
     mobileNavClose.addEventListener('click', () => mobileNav.classList.remove('open'));
     function closeMobileNav() { mobileNav.classList.remove('open'); }
+
+    // UPDATED typewriter roles — more precise, industry-targeted
     const roles = [
       'Founder, AIWorkFusion',
       'Full Stack Developer',
-      'Frontend Engineer',
       'React Architect',
-      'Django Rest Specialist',
+      'Django REST Specialist',
+      'Frontend Engineer',
     ];
     let roleIndex = 0, charIndex = 0, deleting = false;
     const el = document.getElementById('typewriter');
